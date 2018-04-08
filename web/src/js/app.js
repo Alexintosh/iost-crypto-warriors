@@ -91,15 +91,23 @@ App = {
                 console.log('transactionHash: ', hash);
             })
             .on('confirmation', function(confirmationNumber, receipt){
-                console.log('confirmation: ', confirmationNumber, receipt);
+                console.log('confirmation: ', confirmationNumber, receipt.status === '0x01');
+                if (receipt.status === '0x01' && confirmationNumber === 24) {
+                    gotoProfile();
+                }
             })
             .on('receipt', function(receipt){
-                console.log('receipt: ', receipt);
+                console.log('receipt: ', receipt.status === '0x01');
             })
-            .on('error', console.error);
-            // console.log('get all the fighters: ', game.methods.fighters(0).call());
-            // game.methods.fighters(2).call().then(console.log);
+            .on('error', function(e) {
+                console.log('💣');
+                console.log(e.message);
+            });
         });
+    },
+
+    gotoProfile: function() {
+        // TODO: goto profile
     },
 
     getFighterData: function (data) {
