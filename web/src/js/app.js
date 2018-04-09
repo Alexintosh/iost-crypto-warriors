@@ -42,7 +42,7 @@ App = {
     initContract: function () {
         // 🚀：Artifacts are information about our contract such as its deployed address and Application Binary Interface (ABI). 
         // The ABI is a JavaScript object defining how to interact with the contract including its variables, functions and their parameters.
-        const contractAddress = '0x045a15F8C38c91c56fc6749311fAC0f77a9bb55d';
+        const contractAddress = '0x61F8c1Df96a536e67a00363d8cC291b381B0e2f4';
 
         $.getJSON('../data/Game.json', function (data) {
             // console.log(data);
@@ -91,13 +91,13 @@ App = {
                 console.log('transactionHash: ', hash);
             })
             .on('confirmation', function(confirmationNumber, receipt){
-                console.log('confirmation: ', confirmationNumber, receipt.status === '0x01');
-                if (receipt.status === '0x01' && confirmationNumber === 24) {
-                    gotoProfile();
-                }
+                console.log('confirmation: ', confirmationNumber, receipt.status);
+                // if (receipt.status === '0x01' && confirmationNumber === 24) {
+                //     gotoProfile();
+                // }
             })
             .on('receipt', function(receipt){
-                console.log('receipt: ', receipt.status === '0x01');
+                console.log('receipt: ', receipt.status);
             })
             .on('error', function(e) {
                 console.log('💣');
@@ -107,7 +107,7 @@ App = {
     },
 
     gotoProfile: function() {
-        // TODO: goto profile
+        window.location.href = '../profile.html';
     },
 
     getFighterData: function (data) {
