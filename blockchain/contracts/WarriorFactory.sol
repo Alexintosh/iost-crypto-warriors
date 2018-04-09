@@ -1,7 +1,7 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.18;
 
 import "../node_modules/zeppelin-solidity/contracts/ownership/Ownable.sol";
-import "./oraclize/oraclizeAPI.sol";
+import "./oraclize/oraclizeAPI_0.5.sol";
 
 contract WarriorFactory is Ownable, usingOraclize {
     enum BodyPart { Weapon, Clothes, Belt, LeftRing, RightRing, End }
