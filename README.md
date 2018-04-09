@@ -1,7 +1,5 @@
-# iost-crypto-warriors
-⚔️Fight on blockchain and feel the power of the sword
-
-# IOST-Crypto-Warrior is a blockchain-based foster battle game. Players from the penniless, fledgling began to swept the rivers and lakes, relying on killing monsters to upgrade, and gradually gain a stronger fighting force, and eventually cultivated into a generation of heroes.It consists of two parts:
+## Intro
+IOST-Crypto-Warrior is a blockchain-based foster battle game. Players from the penniless, fledgling began to swept the rivers and lakes, relying on killing monsters to upgrade, and gradually gain a stronger fighting force, and eventually cultivated into a generation of heroes.It consists of two parts:
 
 ### Smart Contracts
 The entire game logic is a smart contract built on the blockchain, which ensures that the game data is fair and just and cannot be tampered with. The source of all data in the game can be traced, all transactions can be queried, completely transparent and open, it is impossible to carry out black-box operations. Support ERC721, the items in the game can be freely and securely traded.
